@@ -1,0 +1,371 @@
+@tailwind base;
+@tailwind components;
+@@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600');
+
+.App {
+    container: mx-auto p-4;
+    /* Utilizar clases de Tailwind CSS para estilizar el componente App */
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgb(23, 120, 216);
+    color: #fff;
+}
+.header a {
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.logo {
+    margin-right: 20px; /* espacio entre la imagen y el resto del header */
+}
+
+.logo img {
+    width: 200px;    /* ancho de la imagen */
+    height: 70px;   /* alto de la imagen */
+    object-fit: cover; /* ajusta la imagen al tamaño del contenedor */
+    /* margin-right: 20px;  margen a la derecha de la imagen */
+}
+
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1250px;
+    /* ancho máximo del contenedor */
+    margin: 0 auto;
+    /* centra el contenedor horizontalmente */
+    padding: 0 20px;
+    /* agrega un margen de 20px a los lados */
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0;  /* quita margen superior */
+}
+
+.nav-links>* {
+    margin-right: 20px; /* espacio entre los elementos del menú */
+}
+
+.header-right {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-right>* {
+    margin-left: 20px;
+}
+
+.header-right a:last-child {
+    font-size: 24px;   /*tamaño del carrito*/
+}
+
+.username {
+    margin-right: 20px;
+}
+
+.profile-icon {
+    font-size: 24px;
+    margin-right: 20px;
+    color: #fff;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown>a {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown>a>svg {
+    margin-left: 10px;
+    font-size: 10px;   /* reduce el tamaño del icono */
+    vertical-align: middle;   /* ajusta la posición vertical del icono */
+}
+
+.dropdown-menu {
+    background-color: rgb(118, 129, 141);   /* mismo color de fondo que el encabezado */
+    position: absolute;
+    top: 120%;
+    left: 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    color: #fff;
+    transition: opacity 0.5s;
+}
+
+.dropdown-menu:hover {
+    display: block;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    color: #fff;    /* texto blanco para los enlaces del dropdown menu */
+    white-space: nowrap;    /* elimina el salto de línea entre los elementos del menú */
+}
+
+.dropdown-menu li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+.dropdown-menu li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu li:hover {
+    background-color: rgb(23, 120, 216);
+    /* Agrega este estilo para cambiar el color al pasar el ratón con opacidad */
+}
+
+
+/* CAMISETAS */
+.camisetas-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.camiseta {
+    flex-basis: 30%; /* ancho de cada camiseta */
+    text-align: center;  /* centra el texto dentro de cada camiseta */
+    margin: 40px; /* agrega un poco de margen para separar las camisetas */
+    background-color: #fff;
+    padding: 50px; /* agrega un poco de padding para separar las camisetas */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.camiseta .precio {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.btn-agregar {
+    background-color: #4CAF50;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    white-space: nowrap;    /* elimina el salto de línea */
+}
+
+.btn-agregar:hover {
+    background-color: #3e8e41;
+}
+
+/* REGISTRARSE */
+.container-register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f7f7f7;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.logo-register {
+    height: 10rem;
+}
+
+.title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.error {
+    color: #ff0000;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+}
+
+.button {
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #2e6da4;
+}
+
+.error-message {
+    background-color: #ff9999;
+    padding: 1rem;
+    border: 1px solid #ff0000;
+    color: #ff0000;
+}
+
+.success-message {
+    background-color: #99ff99;
+    padding: 1rem;
+    border: 1px solid #00ff00;
+    color: #00ff00;
+}
+
+/*TALLES*/
+.header-table {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.header-table h2 {
+    margin-top: 40px;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+.header-table p {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 80%;
+    /* Limitar el ancho de la tabla a 80% de la pantalla */
+    margin: 40px auto;
+    /* Centrar la tabla horizontalmente */
+    padding: 20px;
+    /* Agregar un padding para separar la tabla del borde de la pantalla */
+    border: 1px solid #ddd;
+    /* Agregar un borde a la tabla */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Agregar una sombra para dar profundidad */
+    width: 80%;
+    /* Limitar el ancho de la tabla a 80% de la pantalla */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+}
+
+.table th, .table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/*CARRITO*/
+.cart-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 400px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    overflow-y: auto;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-out;
+}
+
+.cart-container.open {
+    transform: translateX(0);
+}
+
+.cart-container h2 {
+    margin-top: 0;
+}
+
+.cart-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cart-container li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.cart-container img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.cart-container .precio {
+    margin-right: auto;
+    font-weight: bold;
+}
+
+.cart-container .btn-eliminar {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.cart-container .btn-cerrar {
+    background-color: #6c757d;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 20px;
+}
